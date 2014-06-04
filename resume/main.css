@@ -1,9 +1,10 @@
 html {
-	font-family: "Helvetica Nueue", Arial, sans-serif;
+	font-family: "Helvetica Neue", Arial, sans-serif;
 	font-size: 16px;
 	line-height: 1.5em;
 	margin: 0;
 	padding: 0;
+	background-color: #EEE;
 }
 
 ul {
@@ -39,7 +40,7 @@ h4 {
 }
 
 #main {
-	width: 80%;
+	width: 90%;
 	height: 100%;
 	margin: 0 auto;
 }
@@ -55,7 +56,7 @@ h4 {
 	margin-top: 30px;
 	text-transform: uppercase;
 	font-weight: 100;
-	letter-spacing: .2em;
+	letter-spacing: .28em;
 	font-size: 3em;
 	text-shadow: 0px 0px 2px #FFF, -3px 2px 2px #BCE;
 }
@@ -96,6 +97,10 @@ h4 {
 }
 
 .date {
+	padding: 1px 15px;
+	border: 1px solid lightblue;
+	margin: -8px;
+	background: #F5F5F5;
 	text-align: right;
 	float: right;
 	margin-top: 1em;
