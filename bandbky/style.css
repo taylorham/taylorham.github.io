@@ -1,0 +1,140 @@
+body {
+  background-color: #fff1dc;
+}
+
+.header-custom {
+  /*background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+  background:    -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+  background:      -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+  background:         linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);*/
+  box-sizing: content-box;
+  border-bottom: 5px solid #28691d;
+}
+
+#logo-img {
+  background: #ffffff url("images/woodplanks.png");
+  background-size: 100%;
+  z-index: 10;
+  position: absolute;
+  left: 0;
+  box-shadow: 0 5px 15px -3px rgba(76,38,12,0.4);
+  box-sizing: content-box;
+  border: 4px solid #28691d;
+  padding: 10px 30px;
+  height: 90px;
+  border-radius: 25px;
+}
+
+.header-custom > .container {
+  height: 80px;
+  position: relative;
+  padding: 20px 0;
+}
+
+.nav-custom {
+  position: absolute;
+  bottom: 0;
+  left: 334px;
+  font-family: Arial, sans-serif;
+  font-weight: 100;
+  font-size: 18px;
+}
+
+.nav-custom li {
+  list-style: none;
+  float: left;
+  padding-right: 30px;
+  padding-bottom: 7px;
+  border-right: 1px solid #28691d;
+  margin-right: 30px;
+}
+
+.nav-custom a {
+  color: #c19200;
+}
+
+.nav-custom a:hover {
+  text-decoration: underline;
+}
+
+.nav-custom a:active {
+  color: #fff;
+}
+
+.nav-custom li:last-child {
+  border: 0;
+  margin: 0;
+}
+
+#carousel {
+  box-sizing: content-box;
+  border-bottom: 5px solid #28691d;
+}
+
+.shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset  0  20px 20px -20px rgba(76,38,12,0.8), inset  0 -17px 20px -20px rgba(76,38,12,0.8);
+  top: 0;
+  left: 0;
+}
+
+.container .marketing {
+  box-sizing: padding-box;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(76,38,12,0.4);
+  margin: 0;
+  padding: 35px 20px;
+}
+
+.overlay {
+  margin: 0 auto;
+  padding: 60px 30px;
+  max-width: 970px;
+  position: absolute;
+  top: 0;
+  box-shadow: 0 0 25px -5px rgba(0,0,0,0.7);
+  z-index: 8;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255,0.9);
+}
+
+/* Correcting for Bootstrap's responsive columns */
+@media screen and (min-width: 768px) {
+  .overlay {
+    width: 720px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .overlay {
+    width: 940px;
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  .overlay {
+    max-width: 970px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .overlay {
+    width: 970px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .col-lg-8 {
+    float: left;
+    display: inline-block;
+    width: 66.66666667%;
+  }
+  .col-lg-4 {
+    float: left;
+    display: inline-block;
+    width: 33.33333333%;
+  }
+}
