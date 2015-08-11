@@ -1,18 +1,42 @@
+/* GLOBAL STYLES
+------------------------------------ */
 body {
+  font-family: 'Quattrocento Sans', sans-serif;
+  /*font-family: 'Open Sans', sans-serif;*/
   background-color: #fff1dc;
 }
 
+h1, h2 {
+  /*font-family: 'Quattrocento', serif;*/
+  font-family: 'Lora', serif;
+  font-weight: 900;
+  letter-spacing: 6px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 35px;
+  margin-top: 30px;
+}
+
+h3 {
+  line-height: 30px;
+}
+
+a:hover, a:visited, a:active, a:focus {
+  text-decoration: none;
+}
+
+/* CUSTOM HEADER
+------------------------------------ */
+
 .header-custom {
-  /*background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
-  background:    -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
-  background:      -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
-  background:         linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);*/
   box-sizing: content-box;
   border-bottom: 5px solid #28691d;
 }
 
 #logo-img {
-  background: #ffffff url("images/woodplanks.png");
+  background: url("images/woodplanks.png"), #fff;
   background-size: 100%;
   z-index: 10;
   position: absolute;
@@ -31,101 +55,236 @@ body {
   padding: 20px 0;
 }
 
+/* NAVIGATION CUSTOMIZATION
+------------------------------------ */
+
 .nav-custom {
   position: absolute;
-  bottom: 0;
-  left: 334px;
-  font-family: Arial, sans-serif;
+  bottom: -60px;
+  left: 342px;
   font-weight: 100;
   font-size: 18px;
 }
 
-.nav-custom li {
-  list-style: none;
-  float: left;
-  padding-right: 30px;
-  padding-bottom: 7px;
-  border-right: 1px solid #28691d;
-  margin-right: 30px;
-}
-
 .nav-custom a {
-  color: #c19200;
+  letter-spacing: .5px;
+  display: block;
+  float: left;
+  padding: 6px 30px 7px;
+  border-right: 1px solid #28691d;
+  color: #b74636;
 }
 
 .nav-custom a:hover {
-  text-decoration: underline;
+  background-image: linear-gradient(transparent 10%, #ffe7aa);
 }
 
 .nav-custom a:active {
-  color: #fff;
+  color: #e27b6c;
 }
 
-.nav-custom li:last-child {
-  border: 0;
-  margin: 0;
+#tree-img {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 80px;
 }
+
+.quoteButton a {
+  display: block;
+  position: absolute;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+  border-top: 2px solid rgba(255,255,255,0.1);
+  border-left: 2px solid rgba(255,255,255,0.1);
+  border-right: 2px solid rgba(0,0,0,0.1);
+  border-bottom: 2px solid rgba(0,0,0,0.1);
+  box-shadow: 2px 2px 5px -3px rgba(0,0,0,0.6);
+  top: 8px;
+  right: 0;
+  color: white;
+  background-color: #daa520;
+  border-radius: 8px;
+  padding: 5px 14px 3px;
+}
+
+.quoteButton a:hover {
+  background-color: #e4BB54;
+}
+
+.phoneNumber {
+  font-family: 'Garamond', 'Times New Roman', serif;
+  color: #28691d;
+  font-size: 24px;
+  font-weight: bolder;
+  font-style: italic;
+  position: absolute;
+  bottom: 45px;
+  right: 120px;
+}
+
+/* CAROUSEL AND IMAGES
+------------------------------------ */
 
 #carousel {
   box-sizing: content-box;
   border-bottom: 5px solid #28691d;
 }
 
+.slide1 {
+  background-image: linear-gradient(rgba(255,255,255,0.5), transparent 25%, transparent 75%, rgba(255,255,255,0.5)), url("images/Yard_1.jpg");
+  background-position: 50% 37%;
+}
+
+.slide2 {
+  background-image: linear-gradient(rgba(255,255,255,0.5), transparent 25%, transparent 75%, rgba(255,255,255,0.5)), url("images/Yard_2.jpg");
+  background-position: center;
+}
+
+.slide3 {
+  background: linear-gradient(rgba(255,255,255,0.5), transparent 25%, transparent 75%, rgba(255,255,255,0.5)), url("images/Yard_3.jpg");
+  background-position: 50% 40%;
+}
+
 .shadow {
   position: absolute;
   width: 100%;
   height: 100%;
-  box-shadow: inset  0  20px 20px -20px rgba(76,38,12,0.8), inset  0 -17px 20px -20px rgba(76,38,12,0.8);
   top: 0;
   left: 0;
 }
 
+/* CONTENT STYLES
+------------------------------------ */
+
 .container .marketing {
-  box-sizing: padding-box;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(76,38,12,0.4);
   margin: 0;
   padding: 35px 20px;
+  border-radius: 0 0 10px 10px;
+}
+
+.home-bg {
+  background: radial-gradient(circle at right 15%, rgba(255,255,255,0.5), white 40%), url('images/Yard_1.jpg');
+  background-position: right 70%;
+  background-size: 120%;
+  padding: 35px 110px !important;
+  text-shadow: 0 0 3px white;
+  background-repeat: no-repeat;
+}
+
+.services-bg {
+  background: radial-gradient(circle at right 15%, rgba(255,255,255,0.5), white 60%), url('images/ornaments.jpg');
+  background-position: 0% center;
+  background-size: 130%;
+  text-shadow: 0 0 3px white;
+  background-repeat: no-repeat;
+}
+
+.products-bg {
+  background: radial-gradient(at right 15%, rgba(255,255,255,0.5), white 45%), url('images/rocks.jpg');
+  background-position: 50% 0%;
+  background-size: 100%;
+  text-shadow: 0 0 3px white;
+  background-repeat: no-repeat;
+}
+
+.marketing h1 {
+  color: #daa520;
+  text-align: center;
+  text-shadow: 0 0 3px white, 1px 2px 3px rgba(0,0,0,0.2);
 }
 
 .overlay {
-  margin: 0 auto;
-  padding: 60px 30px;
-  max-width: 970px;
-  position: absolute;
-  top: 0;
-  box-shadow: 0 0 25px -5px rgba(0,0,0,0.7);
+  display: table;
+  text-align: center;
+  padding: 0 60px 40px;
+  float: right;
+  margin: 75px 30px 0 0;
+  box-shadow: 5px 5px 25px -5px rgba(0,0,0,0.9);
+  border-top: 6px solid #daa520;
   z-index: 8;
-  width: 100%;
-  height: 100%;
+  width: 600px;
+  height: 300px;
   background-color: rgba(255,255,255,0.9);
+  color: #444;
+}
+
+.heading {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.heading h1 {
+  color: #28691d;
+  text-shadow: 0 0 3px white, 1px 2px 3px rgba(0,0,0,0.2);
+}
+
+.heading hr {
+  margin: 20px 90px;
+  border-color: #999;
+}
+
+.heading h3 {
+  color: #444;
+  text-shadow: 0 0 3px white;
+}
+
+.col-lg-6.services {
+  padding-top: 30px;
+  padding-left: 5%;
+}
+
+.services {
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.services-bg h3 {
+  font-weight: bold;
+  letter-spacing: .5px;
+  color: #28691d;
+}
+
+.services ul li {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.services ul li ul li {
+  font-weight: normal;
+}
+
+.products {
+  width: 100%;
+  padding: 0 45px;
+}
+
+.flowers1 {
+  width: 30%;
+  max-width: 360px;
+  margin: 20px 45px 45px 0;
+  float: right;
+}
+
+.veggie-list {
+  width: auto;
+  align: center;
+}
+
+.veggie-list ul {
+  float: left;
+}
+
+/* UTILITY CLASSES
+--------------------------- */
+
+.positioner {
+  position: relative;
 }
 
 /* Correcting for Bootstrap's responsive columns */
-@media screen and (min-width: 768px) {
-  .overlay {
-    width: 720px;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .overlay {
-    width: 940px;
-  }
-}
-
-@media screen and (min-width: 1050px) {
-  .overlay {
-    max-width: 970px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .overlay {
-    width: 970px;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .col-lg-8 {
     float: left;
@@ -136,5 +295,25 @@ body {
     float: left;
     display: inline-block;
     width: 33.33333333%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #tree-img {
+    display: inline;
+  }
+  #logo-img {
+    left: -30px;
+  }
+  .nav-custom {
+    left: 312px;
+  }
+  .quoteButton a {
+    top: 8px;
+    right: 97px;
+  }
+  .phoneNumber {
+    bottom: 5px;
+    right: 85px;
   }
 }
