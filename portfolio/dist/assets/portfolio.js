@@ -685,7 +685,7 @@ catch(err) {
 if (runningTests) {
   require("portfolio/tests/test-helper");
 } else {
-  require("portfolio/app")["default"].create({"name":"portfolio","version":"0.0.0+2e7e0ffa"});
+  require("portfolio/app")["default"].create({"name":"portfolio","version":"0.0.0+01680a0f"});
 }
 
 /* jshint ignore:end */
