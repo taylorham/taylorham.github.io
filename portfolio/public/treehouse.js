@@ -3,7 +3,7 @@ $(document).ready(function() {
 });
 
 function loadScores() {
-  $('#loader').show();
+  $('#loader-wrapper').show();
 
   newTopics = $("#topics"),
   topics = [],
@@ -84,7 +84,7 @@ function loadScores() {
     // Header Badges count generator
   	// $("#treehouse-count").append('I have earned ' + badgeCount + ' badges at Treehouse!');
 
-    $('#loader').fadeOut();
+    $('#loader-wrapper').fadeOut();
     $('.treehouse-widget').fadeIn();
   });
 };
