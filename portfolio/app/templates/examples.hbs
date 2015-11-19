@@ -1,0 +1,24 @@
+<div class="row auto-clear example-gallery">
+  {{#each model as |example|}}
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <div class="example-header">
+          <h3>{{example.title}}</h3>
+        </div>
+        <img src={{example.image}} alt={{example.title}}>
+        <div class="example-caption">
+          <p>{{example.description}}</p>
+        </div>
+        <div class="example-tags hide">
+          {{#each example.tags as |tag|}}
+            <span class={{tag}}>{{tag}}</span>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>
+<script>
+  $('#loader-wrapper').hide();
+</script>
+{{outlet}}
