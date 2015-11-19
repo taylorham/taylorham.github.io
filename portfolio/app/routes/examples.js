@@ -18,13 +18,13 @@ export default Ember.Route.extend({
       url: 'store.remhq.com',
       image: [ 'images/rem.jpg' ],
       title: 'REM Merch Store',
-      description: "Shopify back-end with custom fully adaptive theme.",
+      description: "Shopify back-end with custom adaptive theme.",
       tags: [ 'html', 'css', 'bootstrap' ]
     }, {
       url: 'us-store.yogscast.com',
       image: [ 'images/yogscast.jpg' ],
       title: 'Yogscast Merch Store',
-      description: "Shopify back-end with custom responsive theme.",
+      description: "Shopify back-end with custom adaptive theme.",
       tags: [ 'html', 'css', 'bootstrap' ]
     }, {
       url: 'www.coffeetimescoffee.com',

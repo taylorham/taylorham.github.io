@@ -5,14 +5,18 @@
         <div class="example-header">
           <h3>{{example.title}}</h3>
         </div>
+        <div class="example-body">
         <img src={{example.image}} alt={{example.title}}>
-        <div class="example-caption">
-          <p>{{example.description}}</p>
-        </div>
-        <div class="example-tags hide">
-          {{#each example.tags as |tag|}}
-            <span class={{tag}}>{{tag}}</span>
-          {{/each}}
+          <div class="example-caption">
+            <div class="example-caption-text">
+              <p>{{example.description}}</p>
+            </div>
+          </div>
+          <div class="example-tags hide">
+            {{#each example.tags as |tag|}}
+              <span class={{tag}}>{{tag}}</span>
+            {{/each}}
+          </div>
         </div>
       </div>
     </div>
