@@ -6,7 +6,7 @@ export default Ember.Route.extend({
       url: false,
       image: [ 'images/saucey.jpg' ],
       title: 'Saucey Inc Internal Tool',
-      description: "Rails back-end with jQuery front-end, Parse database, Pusher for notifications. Monitors the company's active deliveries in realtime. Users can edit and troubleshoot orders, view map and directions, and filter active orders by city or store.",
+      description: "Rails back-end with jQuery front-end. Monitors the company's active deliveries in realtime. Users can edit and troubleshoot orders, view map and directions, and filter active orders by city or store.",
       tags: [ 'rails', 'jquery', 'javascript', 'html', 'css', 'bootstrap' ]
     }, {
       url: false,
