@@ -112,16 +112,26 @@ header a {
   max-width: 100%;
   height: auto;
   margin: 0 auto;
+  filter: none;
+  transition: all .3s ease-out;
 }
 
 .thumbnail:hover {
-  transform: scale(1.02);
+  transform: scale(1.05);
   box-shadow: 3px 8px 10px rgba(0,0,0,0.3);
 }
 
 .thumbnail:hover .example-header {
   background-color: #113646;
   text-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+}
+
+.thumbnail:hover img {
+  transform: scale(1.05);
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  filter: blur(2px);
 }
 
 .thumbnail:hover .example-caption,
@@ -158,6 +168,7 @@ header a {
 
 .example-body {
   position: relative;
+  overflow: hidden;
 }
 
 .example-caption {
@@ -173,16 +184,13 @@ header a {
   opacity: 0;
   font-family: 'Open Sans', sans-serif;
   text-shadow: 0 0 8px white;
-  background-color: rgba(255,255,255,0.9);
+  background-color: rgba(255,255,255,0.92);
   color: #333;
 }
 
 .example-caption-text {
-  transition: all .3s ease-out .1s;
+  transition: all .3s ease-out .2s;
   display: block;
-  /* display: table;
-  width: 100%;
-  height: 100%; */
   opacity: 0;
   padding-top: 30px;
   padding-right: 20px;
@@ -191,8 +199,6 @@ header a {
 }
 
 .example-caption-text p {
-  /* display: table-cell;
-  vertical-align: middle; */
   padding: 0;
   margin: 0;
 }
@@ -216,25 +222,26 @@ header a {
   opacity: 0;
   margin: 1px;
   padding: 3px 8px 4px;
+  transition: all .3s ease-out;
 }
 
 .example-tags span:nth-child(1) {
-  transition: all .3s ease-out .3s;
+  transition-delay: .3s;
 }
 .example-tags span:nth-child(2) {
-  transition: all .3s ease-out .4s;
+  transition-delay: .4s;
 }
 .example-tags span:nth-child(3) {
-  transition: all .3s ease-out .5s;
+  transition-delay: .5s;
 }
 .example-tags span:nth-child(4) {
-  transition: all .3s ease-out .6s;
+  transition-delay: .6s;
 }
 .example-tags span:nth-child(5) {
-  transition: all .3s ease-out .7s;
+  transition-delay: .7s;
 }
 .example-tags span:nth-child(6) {
-  transition: all .3s ease-out .8s;
+  transition-delay: .8s;
 }
 
 /* TAG COLORING */
