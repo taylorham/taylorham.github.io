@@ -9,13 +9,13 @@
         <img src={{example.image}} alt={{example.title}}>
           <div class="example-caption">
             <div class="example-caption-text">
-              <p>{{example.description}}</p>
+              <p>{{example.blurb}}</p>
             </div>
-          </div>
-          <div class="example-tags hide">
-            {{#each example.tags as |tag|}}
-              <span class={{tag}}>{{tag}}</span>
-            {{/each}}
+            <div class="example-tags text-center">
+              {{#each example.tags as |tag|}}
+                <span class={{tag}}>{{tag}}</span>
+              {{/each}}
+            </div>
           </div>
         </div>
       </div>

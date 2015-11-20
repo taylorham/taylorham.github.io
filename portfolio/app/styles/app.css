@@ -124,7 +124,18 @@ header a {
   text-shadow: 2px 2px 2px rgba(0,0,0,0.4);
 }
 
-.thumbnail:hover .example-caption {
+.thumbnail:hover .example-caption,
+.thumbnail:hover .example-tags {
+  opacity: 1;
+}
+
+.thumbnail:hover .example-caption-text {
+  opacity: 1;
+  padding-top: 20px;
+}
+
+.thumbnail:hover .example-tags span {
+  transform: translate(0, 0);
   opacity: 1;
 }
 
@@ -146,39 +157,108 @@ header a {
 }
 
 .example-body {
-  position: relative;  
+  position: relative;
 }
 
 .example-caption {
   display: block;
   transition: all .3s ease-out;
   z-index: 500;
+  overflow: hidden;
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
+  width: 100%;
   opacity: 0;
   font-family: 'Open Sans', sans-serif;
+  text-shadow: 0 0 8px white;
   background-color: rgba(255,255,255,0.9);
   color: #333;
 }
 
 .example-caption-text {
-  display: table;
+  transition: all .3s ease-out .1s;
+  display: block;
+  /* display: table;
   width: 100%;
-  height: 100%;
-  padding: 20px;
+  height: 100%; */
+  opacity: 0;
+  padding-top: 30px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
 }
 
 .example-caption-text p {
-  display: table-cell;
-  vertical-align: middle;
+  /* display: table-cell;
+  vertical-align: middle; */
   padding: 0;
   margin: 0;
 }
 
 .example-tags {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  transition: all .3s ease-out;
+  position: absolute;
+  bottom: 10px;
+  opacity: 0;
+}
 
+.example-tags span {
+  border: 3px solid #666;
+  background-color: rgba(255,255,255,0.9);
+  border-radius: 12px;
+  line-height: 40px;
+  transform: translate(0, 20px);
+  opacity: 0;
+  margin: 1px;
+  padding: 3px 8px 4px;
+}
+
+.example-tags span:nth-child(1) {
+  transition: all .3s ease-out .3s;
+}
+.example-tags span:nth-child(2) {
+  transition: all .3s ease-out .4s;
+}
+.example-tags span:nth-child(3) {
+  transition: all .3s ease-out .5s;
+}
+.example-tags span:nth-child(4) {
+  transition: all .3s ease-out .6s;
+}
+.example-tags span:nth-child(5) {
+  transition: all .3s ease-out .7s;
+}
+.example-tags span:nth-child(6) {
+  transition: all .3s ease-out .8s;
+}
+
+/* TAG COLORING */
+
+.bootstrap {
+  border-color: #6f5499 !important;
+  color: #6f5499;
+}
+.css {
+  border-color: #3079ab !important;
+  color: #3079ab;
+}
+.html {
+  border-color: #39add1 !important;
+  color: #39add1;
+}
+.javascript,
+.jquery {
+  border-color: #c25975 !important;
+  color: #c25975;
+}
+.rails {
+  border-color: #e15258 !important;
+  color: #e15258;
 }
 
 /* LOADER CLASSES */
