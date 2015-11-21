@@ -117,6 +117,7 @@ header a {
 }
 
 .thumbnail:hover {
+  -webkit-transform: scale(1.05);
   transform: scale(1.05);
   box-shadow: 3px 8px 10px rgba(0,0,0,0.3);
 }
@@ -127,6 +128,7 @@ header a {
 }
 
 .thumbnail:hover img {
+  -webkit-transform: scale(1.05);
   transform: scale(1.05);
   -webkit-filter: blur(2px);
   -moz-filter: blur(2px);
@@ -145,6 +147,7 @@ header a {
 }
 
 .thumbnail:hover .example-tags span {
+  -webkit-transform: translate(0, 0);
   transform: translate(0, 0);
   opacity: 1;
 }
@@ -218,6 +221,7 @@ header a {
   background-color: rgba(255,255,255,0.9);
   border-radius: 12px;
   line-height: 40px;
+  -webkit-transform: translate(0, 20px);
   transform: translate(0, 20px);
   opacity: 0;
   margin: 1px;
