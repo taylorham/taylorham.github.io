@@ -1,0 +1,23 @@
+/* TAG COLORING */
+
+@mixin tag-coloring($color) {
+  border-color: $color !important;
+  color: $color;
+}
+
+.bootstrap {
+  @include tag-coloring(#6f5499);
+}
+.css {
+  @include tag-coloring(#3079ab);
+}
+.html {
+  @include tag-coloring(#39add1);
+}
+.javascript,
+.jquery {
+  @include tag-coloring(#c25975);
+}
+.rails {
+  @include tag-coloring(#e15258);
+}

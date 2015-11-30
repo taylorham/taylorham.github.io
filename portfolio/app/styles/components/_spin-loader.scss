@@ -1,0 +1,63 @@
+/* LOADER CLASSES */
+
+#loader-wrapper {
+  display: none;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background-color: transparent;
+}
+
+@mixin loader-border($color, $girth) {
+  border: $girth solid transparent;
+  border-radius: 50%;
+  border-top-color: $color;
+}
+
+@mixin spin-helper($position, $color, $girth, $speed) {
+  @if $position == 1 {
+    @include position(relative, 50% null null 50%);
+  }
+  @else {
+    content: "";
+    @if $position == 2 {
+      @include position(absolute, $girth);
+    }
+    @if $position == 3{
+      @include position(absolute, $girth * 3);
+    }
+  }
+  @include loader-border($color, $girth);
+  @include animation(spin $speed linear infinite);
+}
+
+@mixin spin-loader($color, $size, $speed, $girth) {
+  display: block;
+  width: $size;
+  height: $size;
+  margin: #{$size * -0.6667} 0 0 #{$size * -0.5};
+  @include spin-helper(1, lighten($color, 25%), $girth, $speed);
+  &:before {
+    @include spin-helper(2, $color, $girth, #{$speed * 1.5})
+  }
+  &:after {
+    @include spin-helper(3, darken($color, 25%), $girth, #{$speed * 0.75});
+  }
+}
+
+#loader {
+  @include spin-loader(#777, 150px, 2s, 5px);
+}
+
+@include keyframes(spin) {
+  0% {
+    @include transform(rotate(0deg));
+  }
+  100% {
+    @include transform(rotate(360deg));
+  }
+}

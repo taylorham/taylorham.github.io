@@ -1,0 +1,119 @@
+/* EXAMPLES CLASSES */
+
+.thumbnail {
+  @include transition-default;
+  background-color: #111;
+  border-radius: 3px;
+  border-color: #3F5C69;
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+  img {
+    z-index: 400;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    @include filter(none);
+    @include transition-default;
+  }
+  &:hover {
+    @include transform(scale(1.05));
+    box-shadow: 3px 8px 10px rgba(0,0,0,0.3);
+    img {
+      @include transform(scale(1.05) translateZ(0));
+      @include filter(blur(2px));
+    }
+    .example {
+      &-header {
+        background-color: #113646;
+        text-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+      }
+      &-caption,
+      &-tags,
+      &-tags span,
+      &-caption-text {
+        opacity: 1;
+      }
+      &-caption-text {
+        padding-top: 20px;
+      }
+      &-tags span {
+        @include backface-visibility(hidden);
+        @include transform(translateY(0) translateZ(0));
+        @for $i from 1 through 6 {
+          &:nth-child(#{$i}) {
+            transition-delay: .2s + ($i * 0.1s);
+          }
+        }
+      }
+    }
+  }
+}
+
+.example-header {
+  @include transition-default;
+  background-color: #111;
+  padding-left: 15px;
+  margin: -4px -4px 0;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  h3 {
+    font-family: 'Economica', sans-serif;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0 0 4px;
+    line-height: 44px;
+  }
+}
+
+.example-body {
+  position: relative;
+  overflow: hidden;
+}
+
+.example-caption {
+  display: block;
+  @include transition-default;
+  z-index: 500;
+  overflow: hidden;
+  @include position(absolute, 0 null null 0);
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  font-family: 'Open Sans', sans-serif;
+  text-shadow: 0 0 8px white;
+  background-color: rgba(255,255,255,0.92);
+  color: #333;
+}
+
+.example-caption-text {
+  @include transition-default;
+  transition-delay: .2s;
+  display: block;
+  opacity: 0;
+  padding: 30px 20px 20px;
+  p {
+    padding: 0;
+    margin: 0;
+ }
+}
+
+.example-tags {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  @include transition-default;
+  position: absolute;
+  bottom: 10px;
+  opacity: 0;
+  span {
+    border: 3px solid #666;
+    background-color: rgba(255,255,255,0.9);
+    border-radius: 12px;
+    line-height: 40px;
+    @include transform(translateY(20px) translateZ(0));
+    opacity: 0;
+    margin: 0 1px;
+    padding: 3px 8px 4px;
+    @include transition-default;
+  }
+}

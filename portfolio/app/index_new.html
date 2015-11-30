@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Taylor Ham's web development portfolio">
+    <meta name="author" content="Taylor Ham">
+    <!-- <link rel="icon" href="/images/favicon.png"> -->
+
+    <title>Taylor Ham - Web Developer</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" type='text/css' href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type='text/css' href='https://fonts.googleapis.com/css?family=Economica'>
+
+    <link rel="stylesheet" href="assets/portfolio.css">
+
+  </head>
+  <body>
+    <div id="loader-wrapper">
+      <div id="loader"></div>
+    </div>
+
+    <div class="container">
+      <nav id="main-nav">
+        <div class="navbar">
+          <h1>Taylor Ham</h1>
+          <div class="nav-elements">
+            <ul>
+              <li>
+                <a href="#">Work</a>
+              </li>
+              <li>
+                <a href="#">Training</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div id="main-content">
+        <div id="head-panel">
+          <h1>My name is Taylor Ham and I'm a Web Developer.</h1>
+        </div>
+        <div id="work-panel">
+          <div class="work-example">
+            {{outlet 'examples'}}
+          </div>
+        </div>
+        <div id="training-panel">
+          <div class="treehouse-widget">
+            {{outlet 'training'}}
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /container -->
+
+    <script src="assets/portfolio.js"></script>
+  </body>
+</html>

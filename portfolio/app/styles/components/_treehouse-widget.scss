@@ -1,0 +1,34 @@
+/* TREEHOUSE WIDGET STYLES */
+
+.treehouse-widget {
+  display: none;
+  width: 650px;
+  text-align: center;
+  margin: 0 auto;
+  font-family: 'Open Sans', sans-serif;.legend {
+    margin-top: 10px;
+    float: right;
+  }
+  #topics {
+    width: 300px;
+    text-align: left;
+    li {
+      height: 24px;
+      border-left: 24px solid black;
+      padding-left: 12px;
+      margin: 12px;
+    }
+    span {
+      float: right;
+      font-weight: bold;
+    }
+    em {
+      font-style: normal;
+    }
+  }
+  .pie {
+    float: left;
+    width: 305px;
+    margin-left: -50px;
+  }
+}

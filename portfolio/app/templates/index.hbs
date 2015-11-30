@@ -1,4 +1,19 @@
+<div id="main-content">
+  <div id="head-panel">
+    <h1>My name is Taylor Ham and I'm a Web Developer.</h1>
+  </div>
+  <div id="work-panel">
+    <div class="work-example">
+      {{outlet 'examples'}}
+    </div>
+  </div>
+  <div id="training-panel">
+    <div class="treehouse-widget">
+      {{outlet 'training'}}
+    </div>
+  </div>
+</div>
+
 <script>
   $('#loader-wrapper').hide();
 </script>
-{{outlet}}

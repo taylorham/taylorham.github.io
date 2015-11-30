@@ -1,0 +1,50 @@
+/* HEADER AND NAV STYLES */
+
+header a {
+  @include transition-default;
+  color: white;
+  font-family: 'Economica', sans-serif;
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+
+.nav-item > .active {
+  background-color: #eee;
+  color: #23527c;
+  pointer-events: none;
+}
+
+.container {
+  max-width: 1000px;
+  min-height: 300px;
+  background: url(/images/header.png) no-repeat top center;
+  background-size: 100%;
+}
+
+.navbar {
+  margin: 74px 0 0;
+}
+
+.navbar-brand {
+  float: left;
+  font-family: 'Economica', sans-serif;
+  color: white;
+  font-size: 40px;
+  letter-spacing: 20px;
+  margin: 0 75px 0 17px;
+  text-transform: uppercase;
+  &:hover {
+    color: inherit;
+  }
+}
+
+.header-hr {
+  height: 21px;
+  width: 100%;
+  opacity: .25;
+  hr {
+    margin-top: 0;
+    clear: both;
+    border-top: 1px solid white;
+  }
+}
