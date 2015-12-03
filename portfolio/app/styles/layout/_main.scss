@@ -1,20 +1,25 @@
+div[id*='-panel']:not(#footer-panel) {
+  width: 100%;
+  min-height: 700px;
+  text-align: center;
+}
+
 #lead-panel {
-  min-height: 800px;
-  padding-top: 150px;
-  background: url(/images/header.png) #001b27 no-repeat top center;
-  background-size: 1000px auto;
+  @include textureHelper(#001b27, 48);
+  padding-top: 300px;
+  // background: url(/images/header.png) #001b27 no-repeat top center;
+  // background-size: 1000px auto;
 }
 
 #work-panel {
-  min-height: 800px;
-  background-color: #1b0027;
+  @include textureHelper(#1b0027, 33);
+  padding: 100px 0;
   overflow: hidden;
 }
 
 #training-panel {
+  @include textureHelper(#27001b, 27);
   position: relative;
-  min-height: 800px;
-  background-color: #27001b
 }
 
 #footer-panel {
