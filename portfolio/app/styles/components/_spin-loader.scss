@@ -3,7 +3,7 @@
 #loader-wrapper {
   display: none;
   pointer-events: none;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -18,7 +18,7 @@
   border-top-color: $color;
 }
 
-@mixin spin-helper($position, $color, $girth, $speed) {
+@mixin spin-segment($position, $color, $girth, $speed) {
   @if $position == 1 {
     @include position(relative, 50% null null 50%);
   }
@@ -36,16 +36,16 @@
 }
 
 @mixin spin-loader($color, $size, $speed, $girth) {
+  @include spin-segment(1, lighten($color, 25%), $girth, $speed);
   display: block;
   width: $size;
   height: $size;
   margin: #{$size * -0.6667} 0 0 #{$size * -0.5};
-  @include spin-helper(1, lighten($color, 25%), $girth, $speed);
   &:before {
-    @include spin-helper(2, $color, $girth, #{$speed * 1.5})
+    @include spin-segment(2, $color, $girth, #{$speed * 1.5})
   }
   &:after {
-    @include spin-helper(3, darken($color, 25%), $girth, #{$speed * 0.75});
+    @include spin-segment(3, darken($color, 25%), $girth, #{$speed * 0.75});
   }
 }
 

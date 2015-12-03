@@ -1,0 +1,23 @@
+#lead-panel {
+  min-height: 800px;
+  padding-top: 150px;
+  background: url(/images/header.png) #001b27 no-repeat top center;
+  background-size: 1000px auto;
+}
+
+#work-panel {
+  min-height: 800px;
+  background-color: #1b0027;
+  overflow: hidden;
+}
+
+#training-panel {
+  position: relative;
+  min-height: 800px;
+  background-color: #27001b
+}
+
+#footer-panel {
+  min-height: 300px;
+  background-color: #001b27;
+}

@@ -6,6 +6,10 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('index', {path: '/', resetNamespace: true}, function() {
+    this.route('training');
+    this.route('examples');
+  });
   this.route('training');
   this.route('examples');
 });

@@ -1,19 +1,56 @@
 <div id="main-content">
-  <div id="head-panel">
-    <h1>My name is Taylor Ham and I'm a Web Developer.</h1>
+  <div id="lead-panel">
+    <div class="container">
+      <h1>My name is Taylor Ham and I'm a Web Developer.</h1>
+    </div>
   </div>
   <div id="work-panel">
-    <div class="work-example">
-      {{outlet 'examples'}}
+    <div class="container">
+      <div class="work-example">
+        <div class="row auto-clear">
+          {{#each model as |example|}}
+            <div class="col-sm-6 col-md-4">
+              <div class="thumbnail">
+                <div class="example-header">
+                  <h3>{{example.title}}</h3>
+                </div>
+                <div class="example-body">
+                <img src={{example.image}} alt={{example.title}}>
+                  <div class="example-caption">
+                    <div class="example-caption-text">
+                      <p>{{example.blurb}}</p>
+                    </div>
+                    <div class="example-tags text-center">
+                      {{#each example.tags as |tag|}}
+                        <span class={{tag}}>{{tag}}</span>
+                      {{/each}}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {{/each}}
+        </div>
+      </div>
     </div>
   </div>
   <div id="training-panel">
+    <div id="loader-wrapper">
+      <div id="loader"></div>
+    </div>
     <div class="treehouse-widget">
-      {{outlet 'training'}}
+      <h2>TeamTreehouse.com Achievements</h2>
+      <h3><strong class="total"></strong> total points earned</h3>
+      <div class="pie"></div>
+      <div class="legend">
+        <ul id="topics" class="list-unstyled">
+        </ul>
+      </div>
     </div>
   </div>
 </div>
 
-<script>
-  $('#loader-wrapper').hide();
-</script>
+<script src="/treehouse.js"></script>
+<script src="/fixed-header.js"></script>
+
+{{outlet}}
