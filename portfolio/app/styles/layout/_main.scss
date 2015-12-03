@@ -5,20 +5,20 @@ div[id*='-panel']:not(#footer-panel) {
 }
 
 #lead-panel {
-  @include textureHelper(#001b27, 48);
+  background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/subtle_grunge.png"), linear-gradient(170deg, rgba(0,31,45,0.01), rgba(0,0,0,1)), url('/images/header.png') no-repeat top center / 1000px, #001b27 center;
   padding-top: 300px;
   // background: url(/images/header.png) #001b27 no-repeat top center;
   // background-size: 1000px auto;
 }
 
 #work-panel {
-  @include textureHelper(#1b0027, 33);
+  @include textureHelper(#1b0027, 33, 1);
   padding: 100px 0;
   overflow: hidden;
 }
 
 #training-panel {
-  @include textureHelper(#27001b, 27);
+  @include textureHelper(#27001b, 27, 1);
   position: relative;
 }
 

@@ -101,7 +101,7 @@
 }
 
 // Mixin for easy inclusion
-@mixin textureHelper($color, $texture-number, $inverted:1) {
+@mixin textureHelper($color, $texture-number, $inverted) {
   $texture-top-background: adjust-color($color, $lightness: 1%);
   $texture-bottom-background: adjust-color($color, $hue: 20, $lightness: -20%);
   // gradient color 1, gradient color 2, gradient angle, texture-number, 0=inverted or 1=normal

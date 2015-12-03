@@ -38,10 +38,12 @@ header a {
   font-size: 40px;
   letter-spacing: 20px;
   margin: 0 75px 0 0;
-  margin-left: calc(50% - 465px);
   text-transform: uppercase;
   &:hover {
     color: inherit;
+  }
+  @media (min-width: 992px) {
+    margin-left: calc(50% - 465px);
   }
 }
 
