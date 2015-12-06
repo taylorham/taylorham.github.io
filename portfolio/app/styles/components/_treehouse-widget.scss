@@ -30,8 +30,11 @@
       font-style: normal;
     }
   }
-  .pie {
-    // width: 305px;
-    // margin-left: -25%;
+  .pie-wrapper {
+    width: 320px;
+    margin: 0 auto;
+    .pie {
+      margin-left: -40px;
+    }
   }
 }
