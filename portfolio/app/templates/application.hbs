@@ -2,22 +2,26 @@
   <div class="container">
     <header class="main-header">
       <nav class="navbar">
-        <a class="navbar-brand" href="/#/">Taylor Ham</a>
-        <ul class="nav navbar-nav">
-          <li class="nav-item active">
-            {{link-to 'Home' 'index'}}
-          </li>
-          <li class="nav-item">
-            {{link-to 'Training' 'training'}}
-          </li>
-          <li class="nav-item">
-            {{link-to 'Examples' 'examples'}}
-          </li>
-        </ul>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapse" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#lead-panel">Taylor Ham</a>
+        </div>
+        <div class="collapse navbar-collapse pull-right" id="nav-collapse">
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="#work-panel">Portfolio</a>
+            </li>
+            <li>
+              <a href="#training-panel">Training</a>
+            </li>
+          </ul>
+        </div>
       </nav>
-      <div class="header-hr">
-        <hr>
-      </div>
     </header>
   </div>
 </div><!-- /.top-bar -->

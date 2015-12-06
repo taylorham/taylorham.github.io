@@ -4,16 +4,16 @@
   z-index: 600;
   width: 100%;
   position: fixed;
-  height: 73px;
-  box-shadow: 5px 0 5px -2px rgba(0,0,0,0);
-  padding-top: 74px;
-  background-color: rgba(0,67,63,0);
+  border-bottom: 1px solid rgba(255,255,255,.01);
+  font-family: 'Economica', sans-serif;
+  box-shadow: 0 3px 10px -2px rgba(0,0,0,0.4);
+  background: linear-gradient(176deg, #004440, #001f2d);
+  background-color: rgba(0,67,63,1);
 }
 
 header a {
   @include transition-default;
   color: white;
-  font-family: 'Economica', sans-serif;
   font-size: 24px;
   letter-spacing: 2px;
   &:focus {
@@ -22,38 +22,55 @@ header a {
 }
 
 .navbar {
-  margin-bottom: 20px;
+  margin-bottom: 0;
+  &-toggle {
+    width: 37px;
+    // margin-right: 0;
+    background-color: #001f2d;
+    padding: 9px 7px;
+    border: 1px solid #ccc;
+    & .icon-bar {
+      width: 100%;
+      background-color: #ccc;
+    }
+  }
 }
 
-.nav-item > .active {
-  background-color: #eee;
-  color: #23527c;
-  pointer-events: none;
-}
+//
+// .nav {
+//   margin-left: 37px;
+// }
+//
+// .nav-item > .active {
+//   background-color: #eee;
+//   color: #23527c;
+//   pointer-events: none;
+// }
 
 .navbar-brand {
-  float: left;
   font-family: 'Economica', sans-serif;
+  font-size: 32px;
+  letter-spacing: 7px;
   color: white;
-  font-size: 40px;
-  letter-spacing: 20px;
-  margin: 0 75px 0 0;
   text-transform: uppercase;
+  // padding: 15px 0px;
   &:hover {
     color: inherit;
   }
   @media (min-width: 992px) {
-    margin-left: calc(50% - 465px);
+    display: inline-block;
+    font-size: 40px;
+    letter-spacing: 20px;
   }
 }
 
-.header-hr {
-  height: 21px;
-  width: 100%;
-  opacity: .25;
-  hr {
-    margin-top: 0;
-    clear: both;
-    border-top: 1px solid white;
-  }
-}
+// .header-hr {
+//   height: 21px;
+//   width: 100%;
+//   opacity: .25;
+//   hr {
+//     margin-top: 0;
+//     clear: both;
+//     border-top: 1px solid white;
+//   }
+// }

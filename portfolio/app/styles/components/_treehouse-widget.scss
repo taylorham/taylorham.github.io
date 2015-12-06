@@ -2,17 +2,19 @@
 
 .treehouse-widget {
   display: none;
-  padding-top: 20px;
-  width: 650px;
   text-align: center;
   margin: 0 auto;
   font-family: 'Open Sans', sans-serif;
+  h2 {
+    font-size: 28px;
+  }
+  h3 {
+    font-size: 22px;
+  }
   .legend {
     margin-top: 10px;
-    float: right;
   }
   #topics {
-    width: 300px;
     text-align: left;
     li {
       height: 24px;
@@ -29,8 +31,7 @@
     }
   }
   .pie {
-    float: left;
-    width: 305px;
-    margin-left: -50px;
+    // width: 305px;
+    // margin-left: -25%;
   }
 }

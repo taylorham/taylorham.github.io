@@ -1,19 +1,34 @@
 div[id*='-panel']:not(#footer-panel) {
   width: 100%;
   min-height: 700px;
-  text-align: center;
+  overflow: hidden;
+  zoom: 1;
+  padding: 50px 0;
+  & > .container {
+    display: block;
+  }
+}
+
+.align-wrapper {
+  display: table;
+  width: 100%;
+}
+
+.v-align {
+  display: table-cell;
+  vertical-align: middle;
 }
 
 #lead-panel {
-  background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/subtle_grunge.png"), linear-gradient(170deg, rgba(0,31,45,0.01), rgba(0,0,0,1)), url('/images/header.png') no-repeat top center / 1000px, #001b27 center;
-  padding-top: 300px;
-  // background: url(/images/header.png) #001b27 no-repeat top center;
-  // background-size: 1000px auto;
+  background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/subtle_grunge.png") center, linear-gradient(170deg, rgba(0,31,45,0.01), rgba(0,0,0,1)), url('/images/header.png') no-repeat top center / 1000px, #001b27 center;
+  text-align: center;
+  .align-wrapper {
+    min-height: 500px;
+  }
 }
 
 #work-panel {
   @include textureHelper(#1b0027, 33, 1);
-  padding: 100px 0;
   overflow: hidden;
 }
 
@@ -25,4 +40,13 @@ div[id*='-panel']:not(#footer-panel) {
 #footer-panel {
   min-height: 300px;
   background-color: #001b27;
+}
+
+.panel-heading {
+  display: inline-block;
+  margin: 0 auto 40px;
+  padding: 5px;
+  font-family: 'Economica', sans-serif;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.5);
 }
