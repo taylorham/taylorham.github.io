@@ -12,7 +12,8 @@
     font-size: 22px;
   }
   .legend {
-    margin-top: 10px;
+    width: 280px;
+    margin: 10px auto 10px;
   }
   #topics {
     text-align: left;
@@ -21,6 +22,7 @@
       border-left: 24px solid black;
       padding-left: 12px;
       margin: 12px;
+      margin-left: 0;
     }
     span {
       float: right;
@@ -31,10 +33,13 @@
     }
   }
   .pie-wrapper {
-    width: 320px;
-    margin: 0 auto;
+    // margin: 0 auto;
     .pie {
-      margin-left: -40px;
+      // margin-left: -40px;
+      // margin: 0 auto;
+      & > svg:first-child {
+        padding-left: 2px;
+      }
     }
   }
 }

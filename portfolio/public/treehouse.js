@@ -90,8 +90,8 @@ function loadScores() {
 };
 
 function createPie(legend) {
-  var width = 400;
-  var height = 300;
+  var width = 280;
+  var height = 280;
   var radius = Math.min(width, height) / 2;
   var colorArray = [];
   var legendArray = [];
@@ -108,8 +108,8 @@ function createPie(legend) {
   var color = d3.scale.ordinal().range(colorArray);
 
   var arc = d3.svg.arc()
-      .outerRadius(radius - 10)
-      .innerRadius(radius - 60);
+      .outerRadius(radius - 20)
+      .innerRadius(radius - 70);
 
   var pie = d3.layout.pie()
       .value(function(d) { return d.points; });

@@ -22,7 +22,20 @@ div[id*='-panel']:not(#footer-panel) {
   background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/subtle_grunge.png") center, linear-gradient(170deg, rgba(0,31,45,0.01), rgba(0,0,0,1)), url('/images/header.png') no-repeat top center / 1000px, #001b27 center;
   text-align: center;
   .align-wrapper {
+    width: 100%;
     min-height: 500px;
+  }
+  .gravatar img {
+    border-radius: 50%;
+  }
+  .lead-blurb {
+    font-family: 'Economica', sans-serif;
+    font-size: 30px;
+    line-height: 50px;
+    @media (max-width: 480px) {
+      margin: 15px auto;
+      width: 300px;
+    }
   }
 }
 
