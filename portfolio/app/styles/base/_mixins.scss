@@ -1,3 +1,9 @@
+
+// Default Transition duration/timing
+@mixin transition-default {
+  transition: all .3s ease-out;
+}
+
 /* Bourbon Refills texture-list
 ===================================================================== */
 
@@ -100,7 +106,7 @@
   }
 }
 
-// Mixin for easy inclusion
+// Custom mixin for Refills textures
 @mixin textureHelper($color, $texture-number, $inverted) {
   $texture-top-background: adjust-color($color, $lightness: 1%);
   $texture-bottom-background: adjust-color($color, $hue: 20, $lightness: -20%);

@@ -2,9 +2,10 @@
 
 .thumbnail {
   @include transition-default;
+  @include backface-visibility(hidden);
   background-color: #111;
   border-radius: 3px;
-  border-color: #3F5C69;
+  border-color: #666;
   box-shadow: 1px 2px 5px rgba(0,0,0,0.4);
   img {
     @include filter(none);
@@ -40,7 +41,6 @@
         padding-top: 20px;
       }
       &-tags span {
-        @include backface-visibility(hidden);
         @include transform(translateY(0) translateZ(0));
         @for $i from 1 through 6 {
           &:nth-child(#{$i}) {

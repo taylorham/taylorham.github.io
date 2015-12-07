@@ -32,14 +32,8 @@
       font-style: normal;
     }
   }
-  .pie-wrapper {
-    // margin: 0 auto;
-    .pie {
-      // margin-left: -40px;
-      // margin: 0 auto;
-      & > svg:first-child {
-        padding-left: 2px;
-      }
-    }
+  .pie > svg {
+    margin-top: -20px;
+    margin-left: -16px;
   }
 }

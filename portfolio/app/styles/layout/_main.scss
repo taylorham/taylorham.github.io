@@ -1,6 +1,6 @@
 div[id*='-panel']:not(#footer-panel) {
   width: 100%;
-  min-height: 700px;
+  min-height: 500px;
   overflow: hidden;
   zoom: 1;
   padding: 50px 0;
@@ -26,7 +26,10 @@ div[id*='-panel']:not(#footer-panel) {
     min-height: 500px;
   }
   .gravatar img {
+    width: 100%;
+    max-width: 250px;
     border-radius: 50%;
+
   }
   .lead-blurb {
     font-family: 'Economica', sans-serif;
