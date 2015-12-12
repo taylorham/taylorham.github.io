@@ -1,8 +1,32 @@
-
 // Default Transition duration/timing
 @mixin transition-default {
   transition: all .3s ease-out;
 }
+
+// Treehouse colors for course topics
+$trainingList: (
+  (android, #5cb860),
+  (business, #f9845b),
+  (css, #3079ab),
+  (design, #e59a13),
+  (developmenttools, #637a91),
+  (html, #39add1),
+  (ios, #53bbb4),
+  (java, #2c9676),
+  (javascript, #c25975),
+  (php, #7d669e),
+  (python, #f092b0),
+  (ruby, #e15258),
+  (wordpress, #838cc7),
+  (digitalliteracy, #c38cd4)
+);
+
+// Messing around with easy-to-test Triad color schemes
+//
+// $defaultColor: #00618c;
+// $secondaryColor: adjust-hue($defaultColor, 120deg);
+// $tertiaryColor: adjust-hue($defaultColor, -120deg);
+// $complementaryColor: adjust-hue($defaultColor, 180deg);
 
 /* Bourbon Refills texture-list
 ===================================================================== */

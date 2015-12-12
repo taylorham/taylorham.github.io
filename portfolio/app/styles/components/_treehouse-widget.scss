@@ -18,6 +18,7 @@
   #topics {
     text-align: left;
     li {
+      color: #fff;
       height: 24px;
       border-left: 24px solid black;
       padding-left: 12px;
@@ -35,5 +36,25 @@
   .pie > svg {
     margin-top: -20px;
     margin-left: -16px;
+  }
+}
+
+@each $topic, $color in $trainingList {
+  #pie-#{$topic} {
+    path {
+      transition: all .1s ease-out;
+      fill: $color;
+    }
+    &:hover {
+      path {
+        fill: darken($color, 20%) !important;
+      }
+      #topics.#{topic} {
+        border-color: darken($color, 20%) !important;
+      }
+    }
+  }
+  #legend-#{topic} {
+    border-color: $color !important;
   }
 }

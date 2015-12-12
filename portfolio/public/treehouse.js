@@ -72,9 +72,9 @@ function loadScores() {
       var topic = sortedScores[i][0];
       var points = sortedScores[i][1];
       if (colors[topic]) {
-        color = colors[topic];
+        var color = colors[topic];
       }
-      topics.push('<li style="border-color: ' + color + '"><em>' + topic + '</em><span>' + points  + '</span></li>');
+      topics.push('<li class="' + topic.toLowerCase().replace(' ', '') + '" style="border-color:' + color + '"><em>' + topic + '</em><span>' + points  + '</span></li>');
     }
 
   	newTopics.append(topics);
@@ -127,10 +127,12 @@ function createPie(legend) {
 
   g.append("path")
       .attr("d", arc)
-      .style("fill", function(d) { return color(d.data.topic); });
+      // .style("fill", function(d) { return color(d.data.topic); });
 
   g.append("title")
       .text(function(d) { return d.data.topic; });
+
+  g.attr('id', function(d) { return ('pie-' + d.data.topic.toLowerCase().replace(' ', '')); });
 
   // var timeout;
   // svg.selectAll(".arc").on('mouseover', function(d) {
