@@ -1,29 +1,104 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Portfolio</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emily Is ONE With The Force</title>
+<meta name="description" content="You're invited to celebrate Emily's 1st Birthday! Saturday, April 25th · 2–4PM · 741 Troy Trl · Costumes encouraged. May the Force be with you.">
 
-    <base href="/" />
-<meta name="portfolio/config/environment" content="%7B%22modulePrefix%22%3A%22portfolio%22%2C%22environment%22%3A%22production%22%2C%22baseURL%22%3A%22/%22%2C%22locationType%22%3A%22auto%22%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%7D%7D%2C%22APP%22%3A%7B%22name%22%3A%22portfolio%22%2C%22version%22%3A%220.0.0+8b9c66d1%22%7D%2C%22exportApplicationGlobal%22%3Afalse%7D" />
+<!-- OpenGraph -->
+<meta property="og:title" content="Emily Is ONE With The Force ✨">
+<meta property="og:description" content="Join us to celebrate the dawn of a new era. Saturday, April 25th · 2–4PM · 741 Troy Trl. Costumes encouraged. RSVP to Jemima or Taylor.">
+<meta property="og:image" content="https://taylorham.github.io/og-image.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="1024">
+<meta property="og:image:alt" content="Emily Is One With The Force — Episode I: The First Birthday — Sat. April 25th, 2–4 PM">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://taylorham.github.io/">
+<meta property="og:locale" content="en_US">
 
-    <link rel="stylesheet" type='text/css' href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<!-- Twitter / iMessage -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Emily Is ONE With The Force ✨">
+<meta name="twitter:description" content="Join us to celebrate the dawn of a new era. Saturday, April 25th · 2–4PM · Costumes encouraged.">
+<meta name="twitter:image" content="https://taylorham.github.io/og-image.png">
 
-    <link rel="stylesheet" href="assets/vendor-d41d8cd98f00b204e9800998ecf8427e.css" integrity="sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU= sha512-z4PhNX7vuL3xVChQ1m2AB9Yg5AULVxXcg/SpIdNs6c5H0NE8XYXysP+DGNKHfuwvY7kxvUdBeoGlODJ6+SfaPg==" >
-    <link rel="stylesheet" href="assets/portfolio-1e1a53da9e3560a8daf993fc1b26e4ac.css" integrity="sha256-Am402J3y3DJwH+0r6LKtNAffLigTk0/kRcJxREDjHkI= sha512-MCAfUuwXG0MnFh+lXRRYt3Q4yVFAjF/P1cZZjNKkxm7fBiaX5Df787E6hBHL0gVSB+zyOx+38445VVv8GPAeTA==" >
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-    
-  </head>
-  <body class="texture">
-    
+<canvas id="stars-canvas"></canvas>
 
-    <script src="assets/vendor-57a5365e80a10f5d730ae6c4291c23f7.js" integrity="sha256-3klj0xPJ5B5kLrKC7H/0S6dRqbTIAunHZmmKuvK81I0= sha512-AFSETjxtfW+Jj6zJdLC7jg9G7VBDKjsZFOLBdbAShaS/tIrFnrhl2vA5RfsTWrt4HP10S3B+J2dynrFd3mb+Sg==" ></script>
-    <script src="assets/portfolio-cef50b137c9ca62ca952cf4da0935276.js" integrity="sha256-FSyPqLh8hwo1ecgrTjKNHvZy307AV4MFdA6Vc6NJ6yQ= sha512-5V6QBt0zef2v9N2FvVVXz14ZX+3p10JLYJbSd3/I44ZLexbJct7gaiUNJiPEcDMZ6QBX/3zy+sC/djUD7uc/8w==" ></script>
+<div class="card">
+  <div class="corner-tr"></div>
+  <div class="corner-bl"></div>
+  <div class="scanline-overlay"></div>
+  <div class="lens-flare"></div>
 
-    
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  </body>
+  <div class="name-is fade-in">Emily Is</div>
+  <span class="big-one">ONE</span>
+  <div class="with-force fade-in">With The Force</div>
+
+  <div class="saber-divider">
+    <div class="saber-blue"></div>
+    <div class="saber-dot"></div>
+    <div class="saber-red"></div>
+  </div>
+
+  <div class="crawl-box fade-in">
+    <div class="crawl-perspective">
+      <div class="crawl-text">
+        One year ago<br>in a galaxy not so far away,<br>a new hope was born...
+      </div>
+    </div>
+  </div>
+
+  <div class="episode-label fade-in">Episode I</div>
+  <div class="episode-title fade-in">The First Birthday</div>
+
+  <div class="body-text fade-in">
+    The Force is strong with the young Padawan Emily.<br>
+    The galaxy will now unite to celebrate<br>
+    the dawn of her new era.
+  </div>
+
+  <div class="saber-divider">
+    <div class="saber-blue"></div>
+    <div class="saber-dot"></div>
+    <div class="saber-red"></div>
+  </div>
+
+  <div class="date-block fade-in">
+    <span class="date-main">SAT. APRIL 25TH</span>
+    <span class="time-main">2 – 4 PM</span>
+  </div>
+
+  <div class="location fade-in">The Galactic Headquarters</div>
+  <div class="address fade-in">741 Troy Trl, Lexington KY</div>
+
+  <p class="costumes fade-in">👾 Costumes Encouraged · Galactic Attire Welcome</p>
+
+  <div class="saber-divider saber-divider-mid">
+    <div class="saber-blue"></div>
+    <div class="saber-dot"></div>
+    <div class="saber-red"></div>
+  </div>
+
+  <div class="rsvp-box">
+    <span class="rsvp-label">⚠ Action Required</span>
+    <span class="rsvp-text">Please RSVP to Jemima or Taylor</span>
+  </div>
+
+  <span class="rebel-symbol">✦</span>
+
+  <div class="footer-notes fade-in">
+    <a href="https://www.amazon.com/hz/wishlist/ls/3GRW82WNUPZX6?ref_=wl_share" target="_blank">Click here to see gifts from across the galaxy</a>
+  </div>
+</div>
+
+<script src="stars.js"></script>
+</body>
 </html>
