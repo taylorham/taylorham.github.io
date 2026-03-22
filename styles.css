@@ -6,7 +6,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  overflow-x: hidden;
   font-family: 'Exo 2', sans-serif;
 }
 
@@ -20,6 +20,7 @@ canvas#stars-canvas {
 
 .card {
   position: relative;
+  margin: 40px 0 100px;
   width: min(420px, 95vw);
   text-align: center;
   padding: 40px 32px 36px;
