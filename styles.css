@@ -305,7 +305,7 @@ canvas#stars-canvas {
 
 .costumes {
   font-family: 'Exo 2', sans-serif;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
   color: #FFE81Fbb;
   letter-spacing: 1px;
@@ -338,7 +338,7 @@ canvas#stars-canvas {
 }
 .rsvp-text {
   font-family: 'Orbitron', sans-serif;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
   color: #FFE81F;
   letter-spacing: 1.5px;
