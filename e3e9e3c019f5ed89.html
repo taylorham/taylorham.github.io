@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lexington Monday Dinner</title>
+<meta name="description" content="Monday dinner options in Lexington for seven adults and two toddlers, with solid vegan choices.">
+<meta property="og:title" content="Lexington Monday Dinner">
+<meta property="og:description" content="Monday dinner options in Lexington for seven adults and two toddlers, with solid vegan choices.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://taylorham.github.io/e3e9e3c019f5ed89.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Lexington Monday Dinner">
+<meta name="twitter:description" content="Monday dinner options in Lexington for seven adults and two toddlers, with solid vegan choices.">
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --surface: #ffffff;
+    --text: #1a1a1a;
+    --muted: #5c5c5c;
+    --border: #e2e2de;
+    --accent: #1f4b99;
+    --accent-text: #ffffff;
+    --success-bg: #eef6ee;
+    --success-border: #b7d4b7;
+    --success-text: #1e4d2b;
+    --pill-bg: #e8eef8;
+    --pill-text: #1f4b99;
+    --stat-bg: #f0f0ec;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.45;
+    min-height: 100vh;
+  }
+
+  .app {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 20px 16px 32px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .eyebrow {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+
+  h1 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .count {
+    font-size: 13px;
+    color: var(--muted);
+    white-space: nowrap;
+    padding-top: 4px;
+  }
+
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .nav button,
+  .footer button {
+    appearance: none;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+    font: inherit;
+    font-size: 13px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .nav button:hover,
+  .footer button:hover:not(:disabled) {
+    border-color: #c8c8c2;
+  }
+
+  .nav button.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--accent-text);
+  }
+
+  .footer button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  .footer button.primary {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--accent-text);
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid var(--border);
+  }
+
+  .slide {
+    display: none;
+    flex-direction: column;
+    gap: 16px;
+    flex: 1;
+  }
+
+  .slide.active { display: flex; }
+
+  .lede, .body-text {
+    color: var(--muted);
+    font-size: 15px;
+  }
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .stat {
+    background: var(--stat-bg);
+    border-radius: 8px;
+    padding: 14px 12px;
+  }
+
+  .stat .value {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .stat .label {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
+  .cards-3,
+  .cards-2 {
+    display: grid;
+    gap: 12px;
+  }
+
+  .cards-3 { grid-template-columns: repeat(3, 1fr); }
+  .cards-2 { grid-template-columns: repeat(2, 1fr); }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 12px 14px 0;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .card-body {
+    padding: 10px 14px 14px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  .card-body ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .card-body li {
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  .pill {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: var(--pill-bg);
+    color: var(--pill-text);
+    white-space: nowrap;
+  }
+
+  .pill.success {
+    background: var(--success-bg);
+    color: var(--success-text);
+  }
+
+  .pill.neutral {
+    background: #eee;
+    color: #444;
+  }
+
+  h2 {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  h3 {
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .title-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--surface);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    min-width: 520px;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+
+  th {
+    font-weight: 600;
+    background: #fafaf8;
+    color: var(--text);
+  }
+
+  tr:last-child td { border-bottom: none; }
+
+  tbody tr:nth-child(even) { background: #fafaf8; }
+
+  td.center { text-align: center; }
+
+  .tone {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .tone::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #999;
+    flex-shrink: 0;
+  }
+
+  .tone.success::before { background: #2f7d32; }
+  .tone.info::before { background: #1f4b99; }
+  .tone.neutral::before { background: #888; }
+
+  .callout {
+    border: 1px solid var(--success-border);
+    background: var(--success-bg);
+    color: var(--success-text);
+    border-radius: 8px;
+    padding: 12px 14px;
+    font-size: 14px;
+  }
+
+  .callout strong {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 13px;
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  @media (max-width: 700px) {
+    .stats,
+    .cards-3,
+    .cards-2 {
+      grid-template-columns: 1fr;
+    }
+
+    h1 { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="header">
+    <div>
+      <div class="eyebrow">Lexington · Monday night · 7 adults + 2 toddlers</div>
+      <h1 id="slide-title">Brief</h1>
+    </div>
+    <div class="count" id="slide-count">1 / 7</div>
+  </header>
+
+  <nav class="nav" id="slide-nav" aria-label="Slides"></nav>
+
+  <hr>
+
+  <main id="slides">
+    <!-- 0 Brief -->
+    <section class="slide active" data-label="Brief">
+      <p class="lede">Monday dinner in Lexington for seven adults and two ~15-month-olds, with solid vegan options on the table.</p>
+      <div class="stats">
+        <div class="stat"><div class="value">9</div><div class="label">Diners (7 adults + 2 kids)</div></div>
+        <div class="stat"><div class="value">Mon</div><div class="label">Dinner night</div></div>
+        <div class="stat"><div class="value">6</div><div class="label">Places on the shortlist</div></div>
+      </div>
+      <p class="body-text">The shortlist splits into brewery hangs (West Sixth, National Ave) and sit-down dinners (downtown and nearby). Pick the vibe; every option below can feed the vegans in the group.</p>
+    </section>
+
+    <!-- 1 How to choose -->
+    <section class="slide" data-label="How to choose">
+      <p class="lede">Three lanes. Choose by how you want the night to feel — not by hunting for a hidden fourth option.</p>
+      <div class="cards-3">
+        <div class="card">
+          <div class="card-header">West Sixth <span class="pill success">Primary</span></div>
+          <div class="card-body">West Sixth Brewery + Smithtown: vegan sandwiches, kids menu, food to the table.</div>
+        </div>
+        <div class="card">
+          <div class="card-header">National Ave <span class="pill">Pizza</span></div>
+          <div class="card-body">Mirror Twin + Rolling Oven: wood-fired pizza with vegan cheese, two taprooms.</div>
+        </div>
+        <div class="card">
+          <div class="card-header">Downtown <span class="pill neutral">Plated</span></div>
+          <div class="card-body">Agave &amp; Rye or Corto Lima for table service; Archa Nine and Oasis as nearby backups.</div>
+        </div>
+      </div>
+      <h3>Quick compare</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Lane</th><th>Food</th><th>Service</th><th>Hours (Mon)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>West Sixth</td><td>Vegan sandwiches, kids menu</td><td>Order Smithtown to table</td><td>~11am–10pm</td></tr>
+            <tr><td>National Ave</td><td>Wood-fired pizza, vegan cheese</td><td>Counter service</td><td>~11:30am–10pm</td></tr>
+            <tr><td>Downtown</td><td>Tacos, Latin, Thai, mezze</td><td>Table service (mostly)</td><td>Varies — see shortlist</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 2 Shortlist -->
+    <section class="slide" data-label="Shortlist">
+      <p class="lede">Ranked for this group on a Monday. Top two are brewery districts; downtown and nearby fill the sit-down lane.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Place</th>
+              <th>Area</th>
+              <th>Vegan highlights</th>
+              <th>Mon dinner</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="center"><span class="tone success">1</span></td>
+              <td>West Sixth + Smithtown</td>
+              <td>W Sixth St</td>
+              <td>Mushroom po’boy, artichoke “fish,” wraps</td>
+              <td>Open ~10pm</td>
+            </tr>
+            <tr>
+              <td class="center"><span class="tone success">2</span></td>
+              <td>Mirror Twin + Rolling Oven</td>
+              <td>National Ave</td>
+              <td>Vegan cheese pizza</td>
+              <td>Open ~10pm</td>
+            </tr>
+            <tr>
+              <td class="center"><span class="tone info">3</span></td>
+              <td>Agave &amp; Rye</td>
+              <td>Downtown</td>
+              <td>Vegan taco flights, burritos</td>
+              <td>Open late</td>
+            </tr>
+            <tr>
+              <td class="center"><span class="tone info">4</span></td>
+              <td>Corto Lima</td>
+              <td>Downtown</td>
+              <td>Marked vegan / GF dishes</td>
+              <td>5–9pm</td>
+            </tr>
+            <tr>
+              <td class="center"><span class="tone neutral">5</span></td>
+              <td>Archa Nine Thai</td>
+              <td>Suburbs</td>
+              <td>Most dishes vegan-adaptable</td>
+              <td>Call ahead</td>
+            </tr>
+            <tr>
+              <td class="center"><span class="tone neutral">6</span></td>
+              <td>Oasis Mediterranean</td>
+              <td>Chevy Chase</td>
+              <td>Falafel, hummus, mezze</td>
+              <td>Closes ~8:30</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 3 National Ave -->
+    <section class="slide" data-label="National Ave">
+      <div class="title-row">
+        <h2>National Avenue / Warehouse Block</h2>
+        <span class="pill">723–725 National Ave</span>
+      </div>
+      <p class="lede">Two Mirror Twin taprooms side by side with Rolling Oven wood-fired kitchens in both. Counter service, patio, TVs — easy to seat nine on a Monday.</p>
+      <div class="cards-2">
+        <div class="card">
+          <div class="card-header">Why it fits</div>
+          <div class="card-body">
+            <ul>
+              <li>Vegan cheese on wood-fired pizza</li>
+              <li>Wings, salads, and other shareables alongside pizza</li>
+              <li>Two rooms make seating nine easier</li>
+              <li>Monday hours commonly listed 11:30am–10pm</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">Practical notes</div>
+          <div class="card-body">
+            <ul>
+              <li>Order at the counter; seat yourselves</li>
+              <li>Cocktail lounge next door for spirits</li>
+              <li>Walk-in friendly for a party of nine</li>
+              <li>Split across both buildings if one side is full</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="callout"><strong>Best when</strong>The group wants pizza and beer more than a full-service dinner.</div>
+    </section>
+
+    <!-- 4 West Sixth -->
+    <section class="slide" data-label="West Sixth">
+      <div class="title-row">
+        <h2>West Sixth Brewery</h2>
+        <span class="pill">501 W Sixth St</span>
+      </div>
+      <p class="lede">West Sixth Brewery taproom with main room, barrel room, and outdoor seating. Kids welcome. Smithtown Seafood (same building) runs food to your table number.</p>
+      <div class="cards-2">
+        <div class="card">
+          <div class="card-header">Why it fits</div>
+          <div class="card-body">
+            <ul>
+              <li>Vegan plates: mushroom po’boy, artichoke “fish,” wraps</li>
+              <li>Kids menu at Smithtown</li>
+              <li>Food delivered to the West Sixth table</li>
+              <li>Monday hours commonly listed 11am–10pm</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">Practical notes</div>
+          <div class="card-body">
+            <ul>
+              <li>Order Smithtown; give them your table number</li>
+              <li>Large footprint — comfortable for nine</li>
+              <li>Beer garden and outdoor tables when weather cooperates</li>
+              <li>Ale-8 and house soda for non-drinkers</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="callout"><strong>Best when</strong>You want composed vegan plates and a casual brewery room for a mixed group.</div>
+    </section>
+
+    <!-- 5 Downtown -->
+    <section class="slide" data-label="Downtown">
+      <div class="title-row">
+        <h2>Downtown sit-down</h2>
+        <span class="pill">N Broadway · downtown</span>
+      </div>
+      <p class="lede">Plated meals instead of a brewery hang. Agave &amp; Rye and Corto Lima are the main downtown picks; Archa Nine and Oasis are nearby backups.</p>
+      <div class="cards-2">
+        <div class="card">
+          <div class="card-header">Why it fits</div>
+          <div class="card-body">
+            <ul>
+              <li>Agave &amp; Rye: vegan taco flights, burritos, cauliflower bites</li>
+              <li>Corto Lima: vegan / GF items marked; quieter room</li>
+              <li>Archa Nine: Thai menu largely vegan-adaptable</li>
+              <li>Oasis: falafel, hummus, mezze</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">Practical notes</div>
+          <div class="card-body">
+            <ul>
+              <li>Reserve for nine when possible</li>
+              <li>Corto Lima Monday dinner is 5–9pm</li>
+              <li>Oasis closes ~8:30; Agave &amp; Rye runs later</li>
+              <li>Archa Nine has Todds Rd and South Elkhorn locations</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="callout"><strong>Best when</strong>The group wants table service more than pizza-and-beer, and someone will book ahead.</div>
+    </section>
+
+    <!-- 6 Pick -->
+    <section class="slide" data-label="Pick">
+      <h2>Recommended plan</h2>
+      <div class="cards-2">
+        <div class="card">
+          <div class="card-header">West Sixth Brewery + Smithtown <span class="pill success">Primary</span></div>
+          <div class="card-body">
+            <p>Strongest vegan plates and a kids menu in the same building. Order Smithtown to the table; adults get West Sixth beer.</p>
+            <p style="margin-top:8px;color:var(--muted)">Aim for 5:00–5:30.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">Mirror Twin + Rolling Oven <span class="pill">Backup</span></div>
+          <div class="card-body">
+            <p>Pizza night — National Ave, vegan cheese, two taprooms.</p>
+            <p style="margin-top:8px;color:var(--muted)">Walk-in usually fine. Split across both buildings if needed.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">Sit-down alternative</div>
+        <div class="card-body">Agave &amp; Rye for vegan taco flights and later hours, or Corto Lima for a 5:30 reserved table (closes 9).</div>
+      </div>
+    </section>
+  </main>
+
+  <hr>
+
+  <footer class="footer">
+    <button type="button" id="prev-btn">Previous</button>
+    <button type="button" class="primary" id="next-btn">Next</button>
+  </footer>
+</div>
+
+<script>
+  (function () {
+    var slides = Array.prototype.slice.call(document.querySelectorAll(".slide"))
+    var nav = document.getElementById("slide-nav")
+    var titleEl = document.getElementById("slide-title")
+    var countEl = document.getElementById("slide-count")
+    var prevBtn = document.getElementById("prev-btn")
+    var nextBtn = document.getElementById("next-btn")
+    var index = 0
+
+    slides.forEach(function (slide, i) {
+      var btn = document.createElement("button")
+      btn.type = "button"
+      btn.textContent = slide.getAttribute("data-label")
+      btn.addEventListener("click", function () { go(i) })
+      nav.appendChild(btn)
+    })
+
+    var navButtons = Array.prototype.slice.call(nav.querySelectorAll("button"))
+
+    function go(i) {
+      index = Math.max(0, Math.min(slides.length - 1, i))
+      slides.forEach(function (slide, n) {
+        slide.classList.toggle("active", n === index)
+      })
+      navButtons.forEach(function (btn, n) {
+        btn.classList.toggle("active", n === index)
+      })
+      titleEl.textContent = slides[index].getAttribute("data-label")
+      countEl.textContent = (index + 1) + " / " + slides.length
+      prevBtn.disabled = index === 0
+      nextBtn.disabled = index === slides.length - 1
+    }
+
+    prevBtn.addEventListener("click", function () { go(index - 1) })
+    nextBtn.addEventListener("click", function () { go(index + 1) })
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowLeft") go(index - 1)
+      if (e.key === "ArrowRight") go(index + 1)
+    })
+
+    go(0)
+  })()
+</script>
+</body>
+</html>
